@@ -1,0 +1,599 @@
+{
+	"type": "FeatureCollection",
+	"features": [{
+			"type": "Feature",
+			"properties": {
+				"name": "Admission - entrée principale",
+				"url": "admission",
+				"floor": 0,
+				"reachable": true,
+				"pointsAdj": [{
+				    "name": "Ascen_vert_0",
+				    "id": 5,
+					"distance": 1,
+					"instructions": {
+						"voice": "Aller en direction des ascenseurs verts en suivant la ligne verte au sol",
+						"image": "0_receptionToascenseur_vert.jpg"
+					}
+				}, {
+					"name": "Ascen_jaune_0",
+					"id": 3,
+					"distance": 1,
+					"instructions": {
+						"voice": "Aller en direction des ascenseurs jaunes en suivant la ligne jaune au sol",
+						"image": "0_receptionToascenseur_jaune.jpg"
+					}
+				}]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7.136916220479122,
+					46.80132411592993
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Ascen_vert_0",
+				"url": "Ascen_vert_0",
+				"floor": 0,
+				"reachable": false,
+				"pointsAdj": [{
+					"name": "Admission - entrée principale",
+					"id": 0,
+					"distance": 1,
+					"instructions": {
+						"voice": "Prendre le couloir à gauche en sortant de l'ascenseur pour arriver à l'admission de l'entrée principale"
+					}
+				}, {
+					"name": "Ascen_vert_-1",
+					"id": 7,
+					"distance": 1,
+					"instructions": {
+						"voice": "Utiliser l'ascenseur pour vous rendre à l'étage U"
+					}
+				}, {
+					"name": "Ascen_vert_1",
+					"id": 6,
+					"distance": 1,
+					"instructions": {
+						"voice": "Utiliser l'ascenseur pour vous rendre à l'étage B"
+					}
+				}]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7.1366463041927375,
+					46.801313817564306
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Ascen_vert_-1",
+				"url": "Ascen_vert_-1",
+				"floor": -1,
+				"beaconName": "Kontakt_2FG2",
+				"reachable": false,
+				"pointsAdj": [{
+						"name": "Ascen_vert_0",
+						"id": 5,
+						"distance": 1,
+						"instructions": {
+							"voice": "Prendre l'ascenseur vert ou l'escalier pour vous rendre à l'étage 0",
+							"image": "rhumato_retour5.jpg"
+						}
+					},
+					{
+						"name": "couloir-1_debut",
+						"id": 18,
+						"distance": 1,
+						"instructions": {
+							"voice": "Prendre le couloir à gauche en suivant les R marqués au sol",
+							"image": "-1_ascenseur_vertTo_rumatho.jpg"
+						}
+					},
+					{
+						"name": "couloir-1_i7eh",
+						"id": 19,
+						"distance": 1
+					}
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7.1366463041927375,
+					46.801313817564306
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Ascen_vert_1",
+				"url": "Ascen_vert_1",
+				"floor": 1,
+				"reachable": false,
+				"pointsAdj": [{
+					"name": "Ascen_vert_0",
+					"id": 6,
+					"distance": 1,
+					"instructions": {
+						"voice": "Prendre l'ascenseur vert ou l'escalier pour vous rendre à l'étage 0",
+						"image": "anesthésie_retour4.jpg"
+					}
+				}, {
+					"name": "couloir1_775_debut",
+					"id": 11,
+					"distance": 1,
+					"instructions": {
+						"voice": "En sortant de l'ascenseur, tourner à droite puis prendre le couloir à gauche en suivant les A marqués au sol",
+						"image": "1_ascenseur_vertToanesthesie.jpg"
+					}
+				}]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7.1366463041927375,
+					46.801313817564306
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Ascen_jaune_0",
+				"url": "Ascen_jaune_0",
+				"beaconName": "Kontakt_NHC8",
+				"floor": 0,
+				"reachable": false,
+				"pointsAdj": [{
+					"name": "Admission - entrée principale",
+					"id": 1,
+					"distance": 1,
+					"instructions": {
+						"voice": "Traverser le hall pour arriver à l'admission de l'entrée principale"
+					}
+				}, {
+					"name": "Ascen_jaune_-1",
+					"id": 4,
+					"distance": 1,
+					"instructions": {
+						"voice": "Sélectionner l'étage -1 et prendre l'ascenseur proposé par l'appareil",
+						"image": "0_ascenseur_jaune_screen.jpg"
+					}
+				}]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7.13728842323485,
+					46.80137924566819
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "couloir1_775_debut",
+				"floor": 1,
+				"reachable": false,
+				"pointsAdj": [{
+					"name": "Ascen_vert_1",
+					"id": 6,
+					"distance": 1
+				}, {
+					"name": "couloir1_775",
+					"id": 10,
+					"distance": 1
+				}]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7.136612286528333,
+					46.80131294265348
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "couloir1_775",
+				"floor": 1,
+				"reachable": false,
+				"pointsAdj": [{
+					"name": "couloir1_775_debut",
+					"id": 11,
+					"distance": 1,
+					"instructions": {
+						"voice": "Aller tout droit dans le couloir",
+						"image": "anesthésie_retour3.jpg"
+					}
+				}, {
+					"name": "couloir1_776",
+					"id": 12,
+					"distance": 1,
+					"instructions": {
+						"voice": "Continuer tout droit en suivant les A marqués au sol",
+						"image": "1_midparcour_anesthesie.jpg"
+					}
+				}]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7.136626905534712,
+					46.80117058228208
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "couloir1_776",
+				"floor": 1,
+				"reachable": false,
+				"pointsAdj": [{
+					"name": "couloir1_775",
+					"id": 10,
+					"distance": 1,
+					"instructions": {
+						"voice": "Aller tout droit dans le couloir",
+						"image": "anesthésie_retour2.jpg"
+					}
+				}, {
+					"name": "couloir1_776_angle",
+					"id": 13,
+					"distance": 1,
+					"instructions": {
+						"voice": "Tourner à droite puis à gauche, Annoncez-vous au secrétariat de l'anesthésie qui se trouve sur votre droite",
+						"image": "1_recAnesthesie.jpg"
+					}
+				}]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7.136637713692124,
+					46.80100781432628
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "couloir1_776_angle",
+				"floor": 1,
+				"reachable": false,
+				"pointsAdj": [{
+					"name": "couloir1_776",
+					"id": 12,
+					"distance": 1
+				}, {
+					"name": "Anesthésie",
+					"id": 2,
+					"distance": 1
+				}]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7.1365951761617055,
+					46.80100627823802
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Anesthésie",
+				"url": "anesthesie",
+				"floor": 1,
+				"reachable": true,
+				"pointsAdj": [{
+					"name": "couloir1_776_angle",
+					"id": 13,
+					"distance": 1,
+					"instructions": {
+						"voice": "Aller bout du couloir. Tourner à droite puis à gauche",
+						"image": "anesthésie_retour1.jpg"
+					}
+				}]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7.136603995550672,
+					46.80092454483113
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Ascen_jaune_-1",
+				"url": "Ascen_jaune_-1",
+				"floor": -1,
+				"reachable": false,
+				"pointsAdj": [{
+						"name": "Ascen_jaune_0",
+						"id": 3,
+						"distance": 1
+					},
+					{
+						"name": "Secrétatiat Rumatho",
+						"id": 9,
+						"distance": 1
+					}
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7.137307837190491,
+					46.80138649444652
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Secrétatiat Rumatho",
+				"url": "sec_rumatho",
+				"floor": -1,
+				"beaconName": "Kontakt_Z4KE",
+				"reachable": true,
+				"pointsAdj": [{
+						"name": "Ascen_jaune_-1",
+						"id": 7,
+						"distance": 1,
+						"instructions": {
+							"voice": "Prendre les ascenseurs jaunes pour vous rendre à l'étage 0",
+							"image": "rhumato_retour7.jpg"
+						}
+					},
+					{
+						"name": "couloir-1_i7eh",
+						"id": 19,
+						"distance": 1,
+						"instructions": {
+							"voice": "Aller tout droit en suivant les R marqués au sol",
+							"image": "-1_ascenseur_jauneTo_rumatho.jpg"
+						}
+					}
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7.1373157949607275,
+					46.801340940218665
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "couloir-1_i7eh",
+				"floor": -1,
+				"beaconName": "Kontakt_L7EH",
+				"reachable": false,
+				"pointsAdj": [{
+					"name": "Secrétatiat Rumatho",
+					"id": 9,
+					"distance": 1,
+					"instructions": {
+						"voice": "Aller tout droit jusqu'au bout du couloir",
+						"image": "rhumato_retour6.jpg"
+					}
+				}, {
+					"name": "Ascen_vert_-1",
+					"id": 7,
+					"distance": 1,
+					"instructions": {
+						"voice": "Continuer tout droit en suivant les R marqués au sol",
+						"image": "-1_ascenseur_jauneTo_rumatho.jpg"
+					}
+				}]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7.136980462998508,
+					46.80132281825715
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "couloir-1_debut",
+				"floor": -1,
+				"reachable": false,
+				"pointsAdj": [{
+					"name": "Ascen_vert_-1",
+					"id": 7,
+					"distance": 1
+				}, {
+					"name": "couloir-1_775",
+					"id": 10,
+					"distance": 1
+				}]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7.136612286528333,
+					46.80131294265348
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "couloir-1_775",
+				"floor": -1,
+				"beaconName": "Kontakt_2FG2",
+				"reachable": false,
+				"pointsAdj": [{
+					"name": "couloir-1_debut",
+					"id": 18,
+					"distance": 1,
+					"instructions": {
+						"voice": "Aller tout droit dans le couloir",
+						"image": "rhumato_retour4.jpg"
+					}
+				}, {
+					"name": "couloir-1_776",
+					"id": 12,
+					"distance": 1,
+					"instructions": {
+						"voice": "Continuer tout droit en suivant les R marqués au sol",
+						"image": "-1_ascenseurVerTorumatho_mid.jpg"
+					}
+				}]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7.136626905534712,
+					46.80117058228208
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "couloir-1_776",
+				"floor": -1,
+				"beaconName": "Kontakt_IBY2",
+				"reachable": false,
+				"pointsAdj": [{
+					"name": "couloir-1_775",
+					"id": 10,
+					"distance": 1,
+					"instructions": {
+						"voice": "Aller tout droit dans le couloir",
+						"image": "rhumato_retour3.jpg"
+					}
+				}, {
+					"name": "couloir-1_776_angle",
+					"id": 13,
+					"distance": 1,
+					"instructions": {
+						"voice": "Tourner à droit puis à gauche toujours en suivant les R marqués au sol",
+						"image": "-1_ascenseur_vertTo_rumatho.jpg"
+					}
+				}]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7.136637713692124,
+					46.80100781432628
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "couloir-1_776_angle",
+				"floor": -1,
+				"beaconName": "Kontakt_D1QA",
+				"reachable": false,
+				"pointsAdj": [{
+					"name": "couloir-1_776",
+					"id": 15,
+					"distance": 1,
+					"instructions": {
+                        "voice": "Tourner à droit puis à gauche toujours en suivant les R marqués au sol",
+                        "image": "-1_ascenseur_vertTo_rumatho.jpg"
+                    }
+				}, {
+					"name": "couloir-1_777",
+					"id": 17,
+					"distance": 1,
+					"instructions": {
+                    "voice": "Tourner à droit puis à gauche toujours en suivant les R marqués au sol",
+                    "image": "-1_ascenseur_vertTo_rumatho.jpg"
+                }
+				}]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7.1365951761617055,
+					46.80100627823802
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "couloir-1_777",
+				"floor": -1,
+				"beaconName": "Kontakt_JMPH",
+				"reachable": false,
+				"pointsAdj": [{
+						"name": "couloir-1_776_angle",
+						"id": 16,
+						"distance": 1,
+						"instructions": {
+							"voice": "Aller bout du couloir. Tourner à droite puis à gauche",
+							"image": "rhumato_retour2.jpg"
+						}
+					},
+					{
+						"name": "Rumatho",
+						"id": 8,
+						"distance": 1,
+						"instructions": {
+							"voice": "Tourner à  gauche et traverser la cage d'escalier. Ensuite, s'annoncer au secrétariat",
+							"image": "-1_endparcour_rumatho.jpg"
+						}
+					}
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7.136602413773431,
+					46.8008996408295
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Rumatho",
+				"url": "rumatho",
+				"beaconName": "Kontakt_71MO",
+				"floor": -1,
+				"reachable": true,
+				"pointsAdj": [{
+					"name": "couloir-1_777",
+					"id": 17,
+					"distance": 1,
+					"instructions": {
+						"voice": "Traverser la cage d'escalier. Ensuite, tourner à droite",
+						"image": "rhumato_retour1.jpg"
+					}
+				}]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					7.136693158216019,
+					46.800899306613786
+				]
+			}
+		}
+	]
+}
