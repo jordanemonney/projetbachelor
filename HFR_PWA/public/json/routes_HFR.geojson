@@ -5,6 +5,7 @@
 			"properties": {
 				"name": "Admission - entrée principale",
 				"url": "admission",
+				"beaconName": "Kontakt_2FG2",
 				"floor": 0,
 				"reachable": true,
 				"pointsAdj": [{
@@ -77,7 +78,6 @@
 				"name": "Ascen_vert_-1",
 				"url": "Ascen_vert_-1",
 				"floor": -1,
-				"beaconName": "Kontakt_2FG2",
 				"reachable": false,
 				"pointsAdj": [{
 						"name": "Ascen_vert_0",
@@ -440,7 +440,6 @@
 			"properties": {
 				"name": "couloir-1_775",
 				"floor": -1,
-				"beaconName": "Kontakt_2FG2",
 				"reachable": false,
 				"pointsAdj": [{
 					"name": "couloir-1_debut",

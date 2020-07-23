@@ -18,7 +18,6 @@
  */
 "use strict";
 const compression = require('compression');
-require('dotenv').config()
 const express = require("express");
 const redirectToHTTPS = require("express-http-to-https").redirectToHTTPS;
 
@@ -33,25 +32,8 @@ function startServer() {
   // Redirect HTTP to HTTPS,
   app.use(redirectToHTTPS([/localhost:(\d{4})/], [], 301));
 
-  // Logging for each request
-  app.use((req, resp, next) => {
-    const now = new Date();
-    const time = `${now.toLocaleDateString()} - ${now.toLocaleTimeString()}`;
-    const path = `"${req.method} ${req.path}"`;
-    const m = `${req.ip} - ${time} - ${path}`;
-    // eslint-disable-next-line no-console
-    console.log(m);
-    next();
-  });
-
   // compress all responses
   app.use(compression());
-
-  app.get('/', function(req, res){
-    console.log(req.query.id);
-    var uid = req.params.uid, path = req.params[0] ? req.params[0] : 'index.html';
-    res.sendFile(path, {root: './public'});
-  });
 
   app.use(express.static("public"));
 

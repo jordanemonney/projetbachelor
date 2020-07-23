@@ -27,9 +27,10 @@ const FILES_TO_CACHE = [
     'json/floors.geojson',
     'json/routes_HFR.geojson',
     'json/maps-crf-hfrnav.json',
+    'vendor/jquery/jquery.min.js',
     'scripts/install.min.js',
-    'scripts/mapbox.min.js',
-    'scripts/sb-admin-2.min.js',
+    'scripts/coreApp.js',
+    'scripts/sb-admin-2.js',
     'css/sb-admin-2.css',
     'img/instructions/0_ascenseur_jaune_screen.jpg',
     'img/instructions/0_receptionToascenseur_jaune.jpg',
@@ -56,7 +57,7 @@ const FILES_TO_CACHE = [
     'img/instructions/wait.svg',
     'img/install.svg',
     'img/lift_icon.png',
-    'img/logo_hfr.png',
+    'img/logo_hfr.svg',
     'img/Map_pin_icon_green.svg',
     'img/pin.png'
 ];
@@ -70,12 +71,11 @@ self.addEventListener('install', (evt) => {
             return cache.addAll(FILES_TO_CACHE);
         })
     );
-
     self.skipWaiting();
 });
 
 self.addEventListener('activate', (evt) => {
-   // console.log('[ServiceWorker] Activate');
+   console.log('[ServiceWorker] Activate');
     // CODELAB: Remove previous cached data from disk.
     evt.waitUntil(
         caches.keys().then((keyList) => {
@@ -91,7 +91,6 @@ self.addEventListener('activate', (evt) => {
 });
 
 self.addEventListener('fetch', (evt) => {
-    //console.log('[ServiceWorker] Fetch', evt.request.url);
     // CODELAB: Add fetch event handler here.
     if (evt.request.url.includes('')) {
         //console.log('[Service Worker] Fetch (data)', evt.request.url);
@@ -111,6 +110,7 @@ self.addEventListener('fetch', (evt) => {
             }));
         return;
     }
+
     evt.respondWith(
         caches.open(CACHE_NAME).then((cache) => {
             return caches.match(evt.request, {ignoreSearch: true}) //Ignore

@@ -78,7 +78,14 @@ hr {
   height: 0;
   overflow: visible;
 }
-h1{
+h1 a{
+  text-decoration:none;
+  color: white;
+}
+
+h1 a:hover{
+  text-decoration:none;
+  color: white;
 }
 
 h2, h3, h4, h5, h6 {
@@ -4366,7 +4373,13 @@ input[type="button"].btn-block {
 
 .card-body {
   flex: 1 1 auto;
-  padding: 1.25rem;
+  padding: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .card-body {
+    height: 300px;
+  }
 }
 
 .card-title {
@@ -9830,7 +9843,11 @@ a:focus {
 }
 
 .border-left-primary {
-  border-left: 0.25rem solid #4e73df !important;
+  border-left: 0.25rem solid #0d68ae !important;
+}
+
+.border-right-primary {
+  border-right: 0.25rem solid #0d68ae !important;
 }
 
 .border-bottom-primary {
@@ -10579,7 +10596,7 @@ a:focus {
 
 .chart-area {
   position: relative;
-  height: 10rem;
+  height: 100%;
   width: 100%;
 }
 
@@ -11150,7 +11167,7 @@ footer{
   height: 100%;
 }
 .mapbox{
-  height: 400px;
+  height: 300px;
 }
 /*--------------------Button select----------------------*/
 .select_btn button{
@@ -11197,4 +11214,28 @@ footer{
 }
 .instructionText {
   text-align: center;
+}
+.instructionText p{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.first_card{
+  height: 5rem;
+}
+.info{
+  display: block !important;
+}
+.buttonDeactivate img{
+  height: 20px;
+}
+.dest{
+  padding: 0;
+}
+
+.infoLaw{
+  height: auto;
 }

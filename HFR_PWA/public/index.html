@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
 
@@ -14,22 +14,24 @@
 
   <!-- Custom fonts for this template-->
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-  <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" async/>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet"/>
   <link rel="preconnect" href="https://events.mapbox.com">
+  <link rel="preconnect" href="https://api.mapbox.com">
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin-2.min.css" rel="stylesheet" async>
+  <link href="css/sb-admin-2.css" rel="stylesheet" media="screen and (min-device-width: 120px)">
 
   <!-- CODELAB: Add link rel manifest -->
   <link rel="manifest" href="manifest.json">
   <meta name="description" content="A sample weather app">
   <meta name="theme-color" content="#45484b" />
 
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js" defer></script>
 
 </head>
 
 <body id="page-top">
-  <script src="scripts/mapbox.min.js"></script>
-  <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="scripts/coreApp.min.js"></script>
   <!-- <script src="https://code.responsivevoice.org/responsivevoice.js?key=LlvDqqVa"></script> -->
   <!-- Page Wrapper -->
 
@@ -47,50 +49,16 @@
       <!-- Divider -->
       <hr class="sidebar-divider">
 
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Téléphone
-      </div>
-
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <i class="fas fa-phone"></i>
-          <span>Components</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
-            <a class="collapse-item" href="cards.html">Cards</a>
-          </div>
-        </div>
-      </li>
-
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-          <i class="fas fa-phone"></i>
-          <span>Utilities</span>
+        <a class="nav-link collapsed infoActive" href="#">
+          <span>Informations</span>
         </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="utilities-color.html">Colors</a>
-            <a class="collapse-item" href="utilities-border.html">Borders</a>
-            <a class="collapse-item" href="utilities-animation.html">Animations</a>
-            <a class="collapse-item" href="utilities-other.html">Other</a>
-          </div>
-        </div>
+        <hr class="sidebar-divider">
+        <a class="nav-link collapsed" href="http://www.h-fr.ch/">
+          <span>HFR web page</span>
+        </a>
       </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Informations
-      </div>
     </ul>
     <!-- End of Sidebar -->
   </nav>
@@ -110,7 +78,7 @@
             <span></span>
           </button>
           <!-- Sidebar - Brand -->
-          <h1>H-FR NAV</h1>
+          <h1><a href="index.html">H-FR NAV</a></h1>
           <button id="butInstall" aria-label="Install" hidden></button>
         </nav>
         <!-- End of Topbar -->
@@ -118,12 +86,33 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
           <!-- Content Row -->
-          <div class="row">
-
+          <div class="row rowInfo hide">
             <!-- Earnings (Monthly) Card Example -->
             <div class="col-xl-12 col-md-12 mb-4">
-              <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
+              <div class="card shadow h-100 py-2">
+                <div class="card-body infoLaw">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="container info d-flex">
+
+                        <a class="buttonDeactivate infoDeactive" href="#"><img src="img/back.svg" alt="back"></a>
+                        <h2>Information légale</h2>
+                        <p>Les applications que nous avons développés, que ce soit pour le PS6 ou pour ce projet de Bachelor, ne récoltent aucune donnée de l'utilisateur. Nous n'avons pas de système de compte et de login, l'utilisation de notre app est donc totalement anonyme.</p>
+                        <p>Cependant, nous utilisons tout de même certains services fourni par Google. En effet, pour que nos applications fonctionnent, il est nécessaire que l'accès à la position du téléphone et au module bluetooth soient activés.</p>
+                        <p>Nous supposons alors qu'il est possible pour Google de connaître les différents endroits que la personne à visiter dans l'hôpital. </p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          <div class="row rowApp">
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="dest col-xl-12 col-md-12 mb-4">
+              <div class="card border-left-primary border-right-primary shadow h-100 py-2">
+                <div class="first_card card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Lieu de la consultation</div>
@@ -136,8 +125,8 @@
                             <a class="dropdown-item hide" href="#">Action</a>
                           </div>
                         </div>
-                        <button id="btnStart" class="btn" onclick="start_scan()">GO !</button>
-                        <button id="btnStop" onclick="stop_scan()" class="hide">Stop Scan</button>
+                        <button id="btnStart" class="btn">GO!</button>
+                        <button id="btnStop" class="hide">Stop Scan</button>
                       </div>
                   </div>
                 </div>
@@ -147,7 +136,7 @@
           <!-- Content Row -->
           <div class="instructionArea">
           <div class="row">
-            <div class="instruPhoto col-xl-6 col-lg-6 col-sm-6 col-6">
+            <div class="instruPhoto col-xl-6 col-lg-6 col-sm-7 col-7">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
@@ -167,7 +156,7 @@
               </div>
             </div>
 
-            <div class="instruInstru col-xl-6 col-lg-6 col-6">
+            <div class="instruInstru col-xl-6 col-lg-6 col-sm-5 col-5">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
@@ -180,7 +169,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="instructionText chart-area">
-                      <p>Bienvenue au H-FR, </br> </br> Merci de choisir le lieu de votre consultation</p>
+                      <p>Bienvenue au H-FR, Merci de choisir le lieu de votre consultation</p>
                   </div>
                 </div>
               </div>
@@ -200,17 +189,6 @@
                 <!-- Card Body -->
                 <div class="mapbox card-body">
                   <div id="map"></div>
-                  <script>
-                      markerArray = new Array();
-                      mapboxgl.accessToken = 'pk.eyJ1IjoicHM2bmF2IiwiYSI6ImNrN3hyaGt6dTAwYmQzb28zdTY2OWxibWQifQ.UkpxlSM91GWp8cJVBigLtw';
-                      let map = new mapboxgl.Map({
-                        container: 'map',
-                        style: 'mapbox://styles/mapbox/streets-v11',
-                        center: [7.137661, 46.801608],
-                        zoom: 16
-                      });
-                      initMap(map);
-                    </script>
                   </div>
                 </div>
               </div>
@@ -235,7 +213,6 @@
     <!-- End of Content Wrapper -->
 
   </div>
-  </div>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
@@ -247,13 +224,11 @@
     }
   </script>
   <!--<script src="wasm/bearing.js"></script> -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" async></script>
   <!-- CODELAB: Add the install script here -->
-  <script src="/scripts/install.min.js"></script>
+  <script src="scripts/install.min.js" async></script>
   <!-- Custom scripts for all pages-->
-  <script src="scripts/sbadmin.min.js"></script>
-
+  <script src="scripts/sbadmin.min.js" async></script>
 </body>
 
 </html>
